@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 bg-light ticker-list" id="ticker-list">
+                <!-- Ticker symbols will be loaded dynamically here -->
+            </div>
+
+            <div class="col-md-10 bg-white p-4" id="company-data">
+                <h2>Company Data</h2>
+
+                <h3>Basic Information</h3>
+                <table id="company-data-table" class="table">
+                    <!-- Company data table will be populated here -->
+                </table>
+
+<!--                <h3>Important Statistics</h3>-->
+<!--                <table id="statistics" class="table">-->
+
+<!--                </table>-->
+
+                <h3>Income Statement</h3>
+                <table id="income-statement-table" class="table">
+                    <!-- Company data table will be populated here -->
+                </table>
+
+                <h3>Balance Sheet</h3>
+                <table id="balance-sheet-table">
+                    <!-- Balance sheet table will be populated here -->
+                </table>
+
+                <h3>Cash Flow Statement</h3>
+                <table id="cash-flow-statement-table">
+                    <!-- Cash flow statement table will be populated here -->
+                </table>
+            </div>
+        </div>
+    </div>
+   <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <img src="{{ url_for('static', filename='loading-icon.gif') }}" alt="Loading">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
